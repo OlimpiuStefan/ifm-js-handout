@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:production-monitor:contract:reading",
+  "title": "Reading",
+  "description": "One sensor reading, as served by GET /api/readings and as stored in fixtures/readings.json. Plain JSON Schema, so the .NET side can check against the same file.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["deviceId", "name", "value", "unit", "at"],
+  "properties": {
+    "deviceId": { "type": "string", "pattern": "^[A-Z]{2}-\\d{4}$" },
+    "name":     { "type": "string", "minLength": 1 },
+    "value":    {
+      "type": "string",
+      "pattern": "^-?\\d+(\\.\\d+)?$",
+      "description": "A decimal carried as a string, so no precision is lost in transport."
+    },
+    "unit":     { "type": "string", "minLength": 1 },
+    "at":       {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601, UTC. JSON has no date type."
+    }
+  }
+}

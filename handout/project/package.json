@@ -1,0 +1,21 @@
+{
+  "name": "production-monitor",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node api/src/server.js",
+    "test": "node --test",
+    "lint": "eslint .",
+    "build": "esbuild client/app.js --bundle --minify --sourcemap --format=esm --outfile=dist/bundle.js",
+    "verify": "npm run lint && npm test && npm run build"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "esbuild": "^0.28.2",
+    "eslint": "^9.15.0"
+  }
+}

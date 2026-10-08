@@ -1,0 +1,79 @@
+[
+  {
+    "deviceId": "VS-0071",
+    "name": "Conveyor bearing",
+    "value": "12.08",
+    "unit": "mm/s",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "PT-1042",
+    "name": "Press line 1 · inlet",
+    "value": "97.4",
+    "unit": "C",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "PS-0310",
+    "name": "Hydraulic main",
+    "value": "0",
+    "unit": "bar",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "MM-0002",
+    "name": "Cabinet voltage",
+    "value": "23.61",
+    "unit": "V",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "LS-0120",
+    "name": "Coolant tank level",
+    "value": "66.2",
+    "unit": "%",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "SM-0415",
+    "name": "Cooling water flow",
+    "value": "41.35",
+    "unit": "l/min",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "TA-0233",
+    "name": "Oven zone 2",
+    "value": "44.9",
+    "unit": "C",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "PN-0877",
+    "name": "Compressed air",
+    "value": "6.42",
+    "unit": "bar",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "VS-0072",
+    "name": "Spindle motor",
+    "value": "51.7",
+    "unit": "mm/s",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "PT-1043",
+    "name": "Press line 2 · inlet",
+    "value": "91.3",
+    "unit": "C",
+    "at": "2026-09-03T14:32:07.000Z"
+  },
+  {
+    "deviceId": "TA-0234",
+    "name": "Hardening bath",
+    "value": "19.84",
+    "unit": "C",
+    "at": "2026-09-03T14:32:07.000Z"
+  }
+]

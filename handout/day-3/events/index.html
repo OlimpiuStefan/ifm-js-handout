@@ -1,0 +1,64 @@
+<!doctype html>
+<meta charset="utf-8" />
+<link rel="icon" href="data:," />
+<title>Day 3 · Events</title>
+<style>
+  body {
+    font: 15px system-ui;
+    margin: 2rem;
+    max-width: 760px;
+  }
+  .panel {
+    border: 1px solid #bbb;
+    padding: 10px;
+  }
+  .row {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+  .row.selected {
+    background: #e2eff1;
+  }
+  .row .ack {
+    margin: 0 1rem;
+  }
+  #log {
+    font:
+      12px ui-monospace,
+      monospace;
+    white-space: pre;
+    background: #f6f8f9;
+    padding: 10px;
+    margin-top: 1rem;
+    min-height: 120px;
+  }
+</style>
+
+<!-- Open through a local server (npx serve .), because events.js is a module.
+     Read the grey box on the page: log() writes there.
+     One example for the whole topic: a panel of rows; each row has a name, an acknowledge
+     button and a details link. The rules of the application:
+       click on the row          → select the device
+       click on acknowledge      → acknowledge, and do NOT select the row
+       click on details          → select the row, but do not navigate (not yet) -->
+
+<div class="panel" id="panel">
+  <div class="row" data-device-id="PT-1042">
+    <span class="name">Press line 1 · inlet</span>
+    <button class="ack">acknowledge</button>
+    <a href="/devices/PT-1042" class="details">details</a>
+  </div>
+  <div class="row" data-device-id="VS-0071">
+    <span class="name">Conveyor bearing</span>
+    <button class="ack">acknowledge</button>
+    <a href="/devices/VS-0071" class="details">details</a>
+  </div>
+</div>
+<button id="add">add a row</button>
+
+<div id="log"></div>
+<button id="clear">clear log</button>
+
+<script type="module" src="./events.js"></script>

@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<title>Production Monitor</title>
+<style>
+  body { font: 15px system-ui; margin: 2rem; max-width: 720px; }
+  .gauge { width: 160px; height: 90px; border: 1px solid #999; position: relative; cursor: pointer; }
+  .needle { position: absolute; left: 50%; bottom: 0; width: 2px; height: 80px;
+            background: #c1571c; transform-origin: bottom center; transition: transform .3s; }
+  .row { padding: 6px 10px; border-bottom: 1px solid #eee; cursor: pointer;
+         display: flex; justify-content: space-between; gap: 1rem; }
+  .row.selected { background: #e3edfc; }
+</style>
+
+<!-- The page. It owns the elements and hands them to the app; the app and
+     the modules never look in the document themselves. -->
+
+<h3>Selected device</h3>
+<div id="gauge" class="gauge"><div class="needle"></div></div>
+<p id="selected">Click a row to put it on the gauge.</p>
+
+<h3>Equipment</h3>
+<p id="status"></p>
+<div id="panel"></div>
+
+<script type="module">
+  import { start } from '/client/app.js';
+
+  start({
+    panel: document.getElementById('panel'),
+    status: document.getElementById('status'),
+    gauge: document.getElementById('gauge'),
+    selected: document.getElementById('selected'),
+  });
+</script>

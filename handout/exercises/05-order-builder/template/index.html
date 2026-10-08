@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Order Builder</title>
+<style>
+  body { font: 15px system-ui; margin: 2rem; max-width: 560px }
+  #items { border: 1px solid #bbb; padding: 6px; min-height: 2rem }
+  .item { display: grid; grid-template-columns: 1fr 4rem 1fr; align-items: center; padding: 8px 12px; border-bottom: 1px solid #eee }
+  .item span:last-child { text-align: right }
+  .item button { margin: 0 .3rem }
+  #total { font-weight: 600 }
+  #saveStatus { color: #555 }
+</style>
+
+<h2 id="title"></h2>
+<div id="items"></div>
+<p id="total"></p>
+
+<button id="save">Save order</button>
+<p id="saveStatus"></p>
+
+<script type="module" src="./main.js"></script>

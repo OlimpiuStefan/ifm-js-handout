@@ -1,0 +1,31 @@
+<!doctype html>
+<meta charset="utf-8" />
+<link rel="icon" href="data:," />
+<title>Day 2 · The DOM</title>
+<style>
+  body { font: 15px system-ui; margin: 2rem; max-width: 700px; }
+  .row { box-sizing: border-box; padding: 8px 12px; border-bottom: 1px solid #eee; display: flex; gap: 12px; }
+  .label { flex: 1; }
+  .value { font-variant-numeric: tabular-nums; }
+</style>
+
+<!-- Open this file through a local server, not as file://, because dom.js is a module:
+       npx serve .          or any static server, then http://localhost:3000/
+     Keep DevTools open on the Console and on Elements.
+
+     WHEN DOES YOUR SCRIPT RUN?
+       <script src="app.js"></script>                plain script in head: runs before the HTML below it exists
+       <script src="app.js" defer></script>          defer: runs after the whole page is parsed
+       <script type="module" src="app.js"></script>  type="module": deferred by default (this is the one we use)
+       <script src="app.js" async></script>          async: runs whenever it has finished downloading
+     The last line of this file is the third kind. That is why dom.js can find #panel
+     without waiting for anything. -->
+
+<h3>Equipment</h3>
+<div id="panel">
+  <div class="row">
+    <span>PT-1042</span>
+  </div>
+</div>
+
+<script type="module" src="./dom.js"></script>
